@@ -1,0 +1,20 @@
+:root {
+  --color-light: #f8f9fa;
+  --color-white: white;
+  --color-black: #9ea1ac;
+
+  --spacing-small: 10px;
+  --spacing-medium: 15px;
+  --spacing-large: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.7;
+  background-color: var(--color-light);
+}

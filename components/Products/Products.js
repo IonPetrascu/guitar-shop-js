@@ -1,12 +1,13 @@
 class Products {
-  constructor() {
+  constructor () {
     this.classNameActive = 'products-element__btn_active'
     this.labelAdd = 'Add to card'
     this.labelRemove = 'Remove from card'
   }
 
-  handleSetLocationStorage(el, id) {
+  handleSetLocationStorage (el, id) {
     const { pushProduct, products } = localStorageUtil.putProducts(id)
+    console.log('click')
     if (pushProduct) {
       el.classList.add(this.classNameActive)
       el.innerHTML = this.labelRemove
@@ -14,9 +15,10 @@ class Products {
       el.classList.remove(this.classNameActive)
       el.innerHTML = this.labelAdd
     }
-    headerPage.render(products.length)}
+    headerPage.render(products.length)
+  }
 
-  render() {
+  render () {
     const productsStore = localStorageUtil.getProducts()
 
     let htmlCatalog = ''
@@ -34,7 +36,7 @@ class Products {
         <span class='products-element__name'>${name}</span>
         <img class='products-element__img' src='${img}' alt='${name}' />
         <span class='products-element__price'>${price}$</span>
-        <button class='products-element__btn ${activeClass}' onClick='productsPage.handleSetLocationStorage(this,'${id}')'>${activeText}</button>
+        <button class='products-element__btn ${activeClass}' onClick="productsPage.handleSetLocationStorage(this,'${id}')">${activeText}</button>
         </li>
       `
     })

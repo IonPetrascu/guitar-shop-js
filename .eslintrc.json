@@ -1,17 +1,11 @@
 {
-  "rules": {
-    "no-unused-vars": "off"
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  "globals": {
-    "CATALOG":true,
-    "ROOT_SHOPPING":true
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": "latest"
   },
-  "overrides": [
-    {
-      "files": ["*.js", "*.ts"],
-      "rules": {
-       "no-unused-vars": "off"
-      }
-    }
-  ]
+  "rules": {}
 }
